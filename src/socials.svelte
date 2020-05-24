@@ -2,7 +2,7 @@
 export let socials;
 </script>
 
-<div>
+<div class="resume-block">
   <h3>Social links</h3>
   <ul>
     {#each socials as social}
@@ -18,12 +18,22 @@ export let socials;
     padding: 0;
     list-style-type: none;
   }
-  a {
+  :global(li) {
+    margin-bottom: 5px;
+    font-family: "Verdana", sans-serif;
+  }
+  li{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: "Verdana", sans-serif;
+  }
+  a{
+    padding: 0 10px;
     text-decoration: none;
-    color: #242535;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    color: #143038;
+    border-bottom: 2px solid rgba(48, 113, 133, 0.2);
   }
   a:hover, a:focus {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #5296ab;
   }
 </style>

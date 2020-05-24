@@ -14,43 +14,63 @@ const socials = [
 	{name: "mycoralriver@gmail.com", link: "mailto:mycoralriver@gmail.com"}
 ];
 const projects = [
-	{name: "Nsellaspb.ru", description: "online store", link: "http://nsellaspb.ru/", tags: ['HTML','Adaptive CSS','Angular', 'Webpack']},
-	{name: "Beautyhome.me", description: "online store", link: "https://beautyhome.me/", tags: ['']},
-	{name: "Rezerv-chita.ru", description: "online store", link: "http://rezerv-chita.ru", tags: ['']},
-	{name: "Pumparts.ru", description: "online store", link: "https://pumparts.ru/", tags: ['']}
+	{name: "Nsellaspb.ru", description: "registering for training courses platform and ordering medical equipment", link: "http://nsellaspb.ru/", tags: ['HTML','Adaptive CSS','Angular', 'Webpack']},
+	{name: "Beautyhome.me", description: "cosmetics store", link: "https://beautyhome.me/", tags: ['']},
+	{name: "Rezerv-chita.ru", description: "electronics and home appliance store", link: "http://rezerv-chita.ru", tags: ['']},
+	{name: "Pumparts.ru", description: "shop of spare parts and accessories for industrial pumping systems", link: "https://pumparts.ru/", tags: ['']}
 ];
 </script>
+<div class="container-wrapper">
+	<div class="container">
+		<h1>Ksenia Dolganova</h1>
+		<h2>Front-end developer</h2>
 
-<main>
-	<h1>Ksenia Dolganova</h1>
-	<h2>Front-end developer</h2>
-	<img
-		class="photo"
-		src={photo}
-		alt="Ksenia's photo"
-		width="140"
-		height="auto">
-	<Socials {socials}/>
-	<h3>Skills</h3>
-	<ul>
-		{#each skills as skill}
-			<li>{skill}</li>
-		{/each}
-	</ul>
-	<Projects {projects}/>
-</main>
+		<img
+			class="photo"
+			src={photo}
+			alt="Ksenia's photo"
+			width="140"
+			height="auto">
+
+		<Socials {socials}/>
+		<div class="resume-block">
+			<h3>Skills</h3>
+			<ul>
+				{#each skills as skill}
+					<li>{skill}</li>
+				{/each}
+			</ul>
+		</div>
+		<Projects {projects}/>
+	</div>
+</div>
 
 <style>
-	main {
-		text-align: center;
+	:global(body) {
+		font-family: "Lucida Console";
+	}
+	.container-wrapper {
 		padding: 1em;
-		max-width: 240px;
+	}
+	.container {
+		text-align: center;
+		max-width: 500px;
 		margin: 0 auto;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
+	@media (max-width: 640px) {
+		.container {
+			width: 300px;
 		}
+	}
+	h1{
+		font-size: 2.2em;
+	}
+	:global(h3){
+		font-size: 25px;
+		margin: 40px 0 15px;
+	}
+	li{
+		font-size: 18px;
 	}
 </style>
