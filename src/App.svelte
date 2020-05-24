@@ -1,5 +1,24 @@
 <script>
 const photo = './static/photo.jpg';
+import Socials from './socials.svelte';
+import Projects from './projects.svelte';
+
+const skills = ["Responsive HTML & CSS",
+"Sass\ Less\ Stylus",
+"Javascript",
+"React",
+"Gulp\ Webpack"];
+const socials = [
+	{name: "Github", link: "https://github.com/rivestone"},
+	{name: "Telegram", link: "https://t.me/rivestone"},
+	{name: "mycoralriver@gmail.com", link: "mailto:mycoralriver@gmail.com"}
+];
+const projects = [
+	{name: "Nsellaspb.ru", description: "online store", link: "http://nsellaspb.ru/", tags: ['HTML','Adaptive CSS','Angular', 'Webpack']},
+	{name: "Beautyhome.me", description: "online store", link: "https://beautyhome.me/", tags: ['']},
+	{name: "Rezerv-chita.ru", description: "online store", link: "http://rezerv-chita.ru", tags: ['']},
+	{name: "Pumparts.ru", description: "online store", link: "https://pumparts.ru/", tags: ['']}
+];
 </script>
 
 <main>
@@ -11,6 +30,14 @@ const photo = './static/photo.jpg';
 		alt="Ksenia's photo"
 		width="140"
 		height="auto">
+	<Socials {socials}/>
+	<h3>Skills</h3>
+	<ul>
+		{#each skills as skill}
+			<li>{skill}</li>
+		{/each}
+	</ul>
+	<Projects {projects}/>
 </main>
 
 <style>
