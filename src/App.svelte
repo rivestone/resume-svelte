@@ -31,8 +31,10 @@ const projects = [
 			alt="Ksenia's photo"
 			width="140"
 			height="auto">
-
-		<Socials {socials}/>
+		<div class="resume-block">
+		  <h3>Social links</h3>
+			<Socials {socials}/>
+		</div>
 		<div class="resume-block">
 			<h3>Skills</h3>
 			<ul>
@@ -57,7 +59,6 @@ const projects = [
 		max-width: 500px;
 		margin: 0 auto;
 	}
-
 	@media (max-width: 640px) {
 		.container {
 			width: 300px;

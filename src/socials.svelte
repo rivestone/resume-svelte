@@ -1,9 +1,6 @@
 <script>
 export let socials;
 </script>
-
-<div class="resume-block">
-  <h3>Social links</h3>
   <ul>
     {#each socials as social}
       <li>
@@ -11,8 +8,6 @@ export let socials;
       </li>
     {/each}
   </ul>
-</div>
-
 <style>
   :global(ul) {
     padding: 0;
