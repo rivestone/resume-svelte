@@ -9,14 +9,7 @@ export let socials;
     {/each}
   </ul>
 <style>
-  :global(ul) {
-    padding: 0;
-    list-style-type: none;
-  }
-  :global(li) {
-    margin-bottom: 5px;
-    font-family: "Verdana", sans-serif;
-  }
+
   li{
     font-size: 18px;
     margin-bottom: 10px;

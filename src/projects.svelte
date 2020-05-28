@@ -1,19 +1,16 @@
 <script>
-export let projects;
+  export let projects;
 </script>
 
-<div class="resume-block">
-  <h3>Projects</h3>
-  <ul>
-    {#each projects as project}
+<ul>
+  {#each projects as project}
     <li>
       <div class="project-name">{project.name}</div>
       <a href={project.link}>project link</a>
       <p>{project.description}</p>
     </li>
-    {/each}
-  </ul>
-</div>
+  {/each}
+</ul>
 
 <style>
   ul{

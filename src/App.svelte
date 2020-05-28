@@ -24,7 +24,6 @@ const projects = [
 	<div class="container">
 		<h1>Ksenia Dolganova</h1>
 		<h2>Front-end developer</h2>
-
 		<img
 			class="photo"
 			src={photo}
@@ -43,7 +42,10 @@ const projects = [
 				{/each}
 			</ul>
 		</div>
-		<Projects {projects}/>
+		<div class="resume-block">
+		  <h3>Projects</h3>
+			<Projects {projects}/>
+		</div>
 	</div>
 </div>
 
@@ -70,6 +72,14 @@ const projects = [
 	:global(h3){
 		font-size: 25px;
 		margin: 40px 0 15px;
+	}
+	:global(ul) {
+		padding: 0;
+		list-style-type: none;
+	}
+	:global(li) {
+		margin-bottom: 5px;
+		font-family: "Verdana", sans-serif;
 	}
 	li{
 		font-size: 18px;
